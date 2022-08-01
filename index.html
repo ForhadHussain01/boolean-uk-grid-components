@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Static Template</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 
     <style>
       /* Don't touch this START */
@@ -35,24 +35,79 @@
 
 
       .three-column-grid {
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 5px;
       }
+      
 
       .three-column-grid__expand-two {
+
+        display: grid;
+        grid-template-columns: 0.01fr 1fr 0.01fr;
+        grid-gap: 5px;
       }
 
+
+
       .five-column-grid {
+        display: grid;
+        grid-template-columns: 0.01fr 1fr 0.01fr;
+        grid-gap: 5px;
       }
 
       .center-grid {
+ 
+        display: grid;
+        place-items: center;
+
+
       }
 
       .centered {
+        width: 25% ;
       }
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
 
       .two-column-grid {
+        display: grid;
+        grid-template-columns:5fr 5fr;
+        grid-gap: 5px;
+      }
+
+      .two-column-grid__expand-two {
+        display: grid;
+        grid-template-columns: 1fr 6.5fr;
+        column-gap: 5px;
+      }
+
+      .two-column-grid .box {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 5px;
+      }
+
+
+      .logo {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 4px;
+        border: 2px dotted green;
+      }
+
+      .grid-grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-auto-flow: column;
+        grid-gap: 5px;
+      }
+
+      .grid-grid .box {
+         display: grid;
+         grid-auto-flow: column;
+         grid-gap: 5px;
       }
       
       
